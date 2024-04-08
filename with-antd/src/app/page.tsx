@@ -1,10 +1,12 @@
-import { Button } from 'antd'
-import { VerticalAlignBottomOutlined } from '@ant-design/icons'
+import { App } from './app'
+import { CounterStoreProvider } from '@/providers/counter-store-provider'
 
 export default function Home() {
   return (
     <main>
-      <Button icon={<VerticalAlignBottomOutlined />}>test</Button>
+      <CounterStoreProvider>
+        <App />
+      </CounterStoreProvider>
     </main>
   )
 }
